@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "MobileSRBMSystem.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "icons8-летящая-ракета-glyph-neue-32.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "icons8-летящая-ракета-glyph-neue-96.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

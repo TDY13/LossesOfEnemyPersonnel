@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "SpecialEquipment.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "icons8-боеприпасы-олово-ios-16-filled-32.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "icons8-боеприпасы-олово-ios-16-filled-96.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
