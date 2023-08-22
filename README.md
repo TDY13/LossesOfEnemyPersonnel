@@ -1,4 +1,4 @@
-# LossesOfEnemyPersonnel
+# Preparing the project for publication in AppStore
 
 # 1.Functionality Completion:
 Ensure that all core functions of your app are working smoothly without any errors and meet the requirements.
