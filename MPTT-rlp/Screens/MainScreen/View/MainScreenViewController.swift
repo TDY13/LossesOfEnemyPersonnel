@@ -98,8 +98,10 @@ extension MainScreenViewController {
         searchWorkItem?.cancel()
         
         let workItem = DispatchWorkItem { [weak self] in
+            guard let maxSearchResult = self?.lossesPersonnel.count else { return }
             guard let row = Int(searchText), row >= 2 else { return }
-            let adjustedRow = row - 2 
+            let adjustedRow = row - 2
+            guard adjustedRow < maxSearchResult else { return }
             self?.mainView.tableView.scrollToRow(at: IndexPath(row: adjustedRow, section: 0), at: .top, animated: true)
         }
         
