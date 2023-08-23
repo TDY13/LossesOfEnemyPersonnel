@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		170C7AB52A967CA90033D18F /* BaseSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170C7AB42A967CA90033D18F /* BaseSearchViewController.swift */; };
 		171691E42A93AF3C0010F032 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171691E32A93AF3C0010F032 /* AppDelegate.swift */; };
 		171691E62A93AF3C0010F032 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171691E52A93AF3C0010F032 /* SceneDelegate.swift */; };
 		171691ED2A93AF3E0010F032 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 171691EC2A93AF3E0010F032 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		170C7AB42A967CA90033D18F /* BaseSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSearchViewController.swift; sourceTree = "<group>"; };
 		171691E02A93AF3C0010F032 /* MPTT-rlp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MPTT-rlp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		171691E32A93AF3C0010F032 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		171691E52A93AF3C0010F032 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		170C7AB32A967C8B0033D18F /* BaseSearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				170C7AB42A967CA90033D18F /* BaseSearchViewController.swift */,
+			);
+			path = BaseSearchViewController;
+			sourceTree = "<group>";
+		};
 		171691D72A93AF3C0010F032 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				171692052A93B17B0010F032 /* BaseViewController */,
+				170C7AB32A967C8B0033D18F /* BaseSearchViewController */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -310,6 +321,7 @@
 				171692112A93B2D10010F032 /* MainScreenView.swift in Sources */,
 				171692182A93BB2E0010F032 /* UIColor+Extension.swift in Sources */,
 				171692162A93BA6E0010F032 /* Resources.swift in Sources */,
+				170C7AB52A967CA90033D18F /* BaseSearchViewController.swift in Sources */,
 				171691E42A93AF3C0010F032 /* AppDelegate.swift in Sources */,
 				171692272A93CECC0010F032 /* LossesEquipmentViewController.swift in Sources */,
 				171691E62A93AF3C0010F032 /* SceneDelegate.swift in Sources */,

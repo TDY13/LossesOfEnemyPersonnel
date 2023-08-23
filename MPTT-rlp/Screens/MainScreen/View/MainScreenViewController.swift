@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MainScreenViewController: BaseViewController {
+final class MainScreenViewController: BaseSearchViewController {
     private let mainView = MainScreenView()
     
     private var lossesPersonnel: [LossesPersonnelModel] = []
@@ -89,5 +89,21 @@ extension MainScreenViewController {
         snapshot.appendItems(lossesPersonnel)
         
         dataSource?.apply(snapshot)
+    }
+}
+
+// MARK: - UISearchBarDelegate
+extension MainScreenViewController {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchWorkItem?.cancel()
+        
+        let workItem = DispatchWorkItem { [weak self] in
+            guard let row = Int(searchText), row >= 2 else { return }
+            let adjustedRow = row - 2 
+            self?.mainView.tableView.scrollToRow(at: IndexPath(row: adjustedRow, section: 0), at: .top, animated: true)
+        }
+        
+        searchWorkItem = workItem
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: workItem)
     }
 }
