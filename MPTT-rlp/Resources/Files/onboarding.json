@@ -1,0 +1,31 @@
+[
+    {
+        "items": [
+            {
+                "image": "onboarding1",
+                "title": "Welcome to “RLP”",
+                "description": "\"RLP\" includes lists of enemy losses in personnel and equipment.\nThe author earnestly asked you not to stand aside from helping Ukraine!"
+            },
+            {
+                "image": "onboarding2",
+                "title": "The importance of supporting the army: providing security and protection",
+                "description": "Supporting the army is key to ensuring national security and defenсe. A strong army contributes to the strengthening of the state, conflict prevention and peacekeeping."
+            },
+            {
+                "image": "onboarding3",
+                "title": "Come Back Alive: The Importance of Caring for Veterans",
+                "description": "is a call to maintain care and respect for our military personnel returning from the battlefield. By supporting veterans, we recognize their sacrifice and dedication by providing them with the care they need and a path to a normal life after service."
+            },
+            {
+                "image": "onboarding4",
+                "title": "The Power of Volunteers: The Importance of Volunteer Contributions",
+                "description": "\"The Power of Volunteers\" is a call to see volunteering as a means to positively impact society. Volunteers play a key role in various fields, contributing to charity, education and helping those in need."
+            },
+            {
+                "image": "onboarding5",
+                "title": "Caring for animals in times of war: the importance of compassion",
+                "description": "In times of military conflict, it is important to remember animals: providing protection for wildlife, helping pets and preventing poaching."
+            }
+        ]
+    }
+]

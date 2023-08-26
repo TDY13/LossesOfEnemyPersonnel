@@ -69,7 +69,7 @@ class LossesEquipmentViewController: BaseViewController {
                 return nil
             }
             
-            if label == R.constant.date || label == R.constant.day {
+            if label == R.constant.date || label == R.constant.day || label == R.constant.id {
                 return nil
             }
             

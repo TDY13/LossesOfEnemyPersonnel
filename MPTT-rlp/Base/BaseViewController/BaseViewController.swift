@@ -36,7 +36,7 @@ class BaseViewController: UIViewController {
     private func setUpSubviews() {
         view.backgroundColor = R.color.bg
         navigationItem.backButtonDisplayMode = .minimal
-        navigationItem.rightBarButtonItem = .init(image: UIImage(systemName: "crown.fill")?.withTintColor(.systemBlue, renderingMode: .alwaysOriginal), style: .plain, target: self, action: #selector(didTapInfoButton))
+        navigationItem.leftBarButtonItem = .init(image: UIImage(systemName: "crown.fill")?.withTintColor(.systemBlue, renderingMode: .alwaysOriginal), style: .plain, target: self, action: #selector(didTapInfoButton))
     }
     
     private func presentCharityScreen() {

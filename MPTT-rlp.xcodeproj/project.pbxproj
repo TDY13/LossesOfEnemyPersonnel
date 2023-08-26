@@ -26,6 +26,11 @@
 		171692272A93CECC0010F032 /* LossesEquipmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171692252A93CECC0010F032 /* LossesEquipmentViewController.swift */; };
 		171692282A93CECC0010F032 /* LossesEquipmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171692262A93CECC0010F032 /* LossesEquipmentView.swift */; };
 		1716922B2A93D53D0010F032 /* LossesEquipmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1716922A2A93D53D0010F032 /* LossesEquipmentCell.swift */; };
+		17E095FD2A99BBCB00283F6C /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E095FC2A99BBCB00283F6C /* OnboardingViewController.swift */; };
+		17E095FF2A99BBD500283F6C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E095FE2A99BBD500283F6C /* OnboardingView.swift */; };
+		17E096022A99C0D400283F6C /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E096012A99C0D400283F6C /* OnboardingCell.swift */; };
+		17F0DC9E2A9A2EDB00A22738 /* onboarding.json in Resources */ = {isa = PBXBuildFile; fileRef = 17F0DC9D2A9A2EDB00A22738 /* onboarding.json */; };
+		17F0DCA02A9A2FFC00A22738 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F0DC9F2A9A2FFC00A22738 /* OnboardingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +55,11 @@
 		171692252A93CECC0010F032 /* LossesEquipmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LossesEquipmentViewController.swift; sourceTree = "<group>"; };
 		171692262A93CECC0010F032 /* LossesEquipmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LossesEquipmentView.swift; sourceTree = "<group>"; };
 		1716922A2A93D53D0010F032 /* LossesEquipmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesEquipmentCell.swift; sourceTree = "<group>"; };
+		17E095FC2A99BBCB00283F6C /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		17E095FE2A99BBD500283F6C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		17E096012A99C0D400283F6C /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
+		17F0DC9D2A9A2EDB00A22738 /* onboarding.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = onboarding.json; sourceTree = "<group>"; };
+		17F0DC9F2A9A2FFC00A22738 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +133,7 @@
 		171691F92A93B0690010F032 /* Files */ = {
 			isa = PBXGroup;
 			children = (
+				17F0DC9D2A9A2EDB00A22738 /* onboarding.json */,
 				171691FA2A93B0970010F032 /* lossesEquipment.json */,
 				171691FB2A93B0980010F032 /* lossesPersonnel.json */,
 			);
@@ -132,8 +143,10 @@
 		171691FE2A93B0A40010F032 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				17E095F92A99BB9C00283F6C /* OnboardingScreen */,
 				1716920A2A93B2D00010F032 /* MainScreen */,
 				171692212A93CECC0010F032 /* LossesEquipmentScreen */,
+				17E096032A9A1D8500283F6C /* AreaChart */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -242,6 +255,48 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		17E095F92A99BB9C00283F6C /* OnboardingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				17E095FB2A99BBB000283F6C /* Model */,
+				17E095FA2A99BBAB00283F6C /* View */,
+			);
+			path = OnboardingScreen;
+			sourceTree = "<group>";
+		};
+		17E095FA2A99BBAB00283F6C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				17E095FC2A99BBCB00283F6C /* OnboardingViewController.swift */,
+				17E095FE2A99BBD500283F6C /* OnboardingView.swift */,
+				17E096002A99C0C100283F6C /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		17E095FB2A99BBB000283F6C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				17F0DC9F2A9A2FFC00A22738 /* OnboardingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		17E096002A99C0C100283F6C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				17E096012A99C0D400283F6C /* OnboardingCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		17E096032A9A1D8500283F6C /* AreaChart */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AreaChart;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -304,6 +359,7 @@
 				171691FC2A93B0980010F032 /* lossesEquipment.json in Resources */,
 				171691F02A93AF3E0010F032 /* LaunchScreen.storyboard in Resources */,
 				171691ED2A93AF3E0010F032 /* Assets.xcassets in Resources */,
+				17F0DC9E2A9A2EDB00A22738 /* onboarding.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,13 +377,17 @@
 				171692112A93B2D10010F032 /* MainScreenView.swift in Sources */,
 				171692182A93BB2E0010F032 /* UIColor+Extension.swift in Sources */,
 				171692162A93BA6E0010F032 /* Resources.swift in Sources */,
+				17F0DCA02A9A2FFC00A22738 /* OnboardingModel.swift in Sources */,
 				170C7AB52A967CA90033D18F /* BaseSearchViewController.swift in Sources */,
 				171691E42A93AF3C0010F032 /* AppDelegate.swift in Sources */,
 				171692272A93CECC0010F032 /* LossesEquipmentViewController.swift in Sources */,
 				171691E62A93AF3C0010F032 /* SceneDelegate.swift in Sources */,
+				17E095FD2A99BBCB00283F6C /* OnboardingViewController.swift in Sources */,
 				1716921C2A93C0510010F032 /* LossesPersonnelModel.swift in Sources */,
 				171692032A93B1080010F032 /* Bundle+Extension.swift in Sources */,
+				17E096022A99C0D400283F6C /* OnboardingCell.swift in Sources */,
 				171692282A93CECC0010F032 /* LossesEquipmentView.swift in Sources */,
+				17E095FF2A99BBD500283F6C /* OnboardingView.swift in Sources */,
 				171692102A93B2D10010F032 /* MainScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,7 +456,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -450,7 +510,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -473,7 +533,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -503,7 +563,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

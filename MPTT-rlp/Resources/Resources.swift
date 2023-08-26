@@ -21,6 +21,7 @@ struct R {
     }
     
     struct constant {
+        static let id = "id"
         static let day = "day"
         static let date = "date"
         

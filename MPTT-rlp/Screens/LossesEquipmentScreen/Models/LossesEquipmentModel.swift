@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct LossesEquipmentModel: Codable, Hashable {
+struct LossesEquipmentModel: Codable, Hashable, Identifiable {
+    let id = UUID()
     let date: String
     let day, aircraft, helicopter, tank: Int
     let apc, fieldArtillery, mrl: Int
