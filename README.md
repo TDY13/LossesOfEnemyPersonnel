@@ -1,3 +1,10 @@
+## Preview
+
+<img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/launchScreen.png" width="200" height="450">
+<img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding1.png" width="200" height="450">
+<img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding2.png" width="200" height="450">
+
+---
 ![LaunchScreen](https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/launchScreen.png)
 ![LaunchScreen](https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding1.png)
 ![LaunchScreen](https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding2.png)
