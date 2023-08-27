@@ -1,7 +1,7 @@
 # INFO
 * [Prewiew](#Preview)
 * [Gif](#Gif)
-* [Preparing the project for publication in AppStore](#Preparing the project for publication in AppStore)
+* [To-do list](#Preparing-the-project-for-publication-in-AppStore)
 
 ### Preview
 
