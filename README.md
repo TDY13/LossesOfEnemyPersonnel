@@ -12,15 +12,28 @@
      <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding2.png" width="200" height="450"></td
   </tr>
  </table>
-
-  <img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding2.png" width="200" height="450">
-
-<img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding3.png" width="200" height="450"> <img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding4.png" width="200" height="450"> <img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding5.png" width="200" height="450">
-
-<img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/MainScreen.png" width="200" height="450"> <img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/MainScreenWithSearchBar.png" width="200" height="450"> <img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/detailScreen.png" width="200" height="450">
+<table align = "center">
+  <tr>
+     <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding3.png" width="200" height="450"></td>
+     <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding4.png" width="200" height="450"></td>
+     <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding5.png" width="200" height="450"></td
+  </tr>
+ </table>
+ <table align = "center">
+  <tr>
+     <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/MainScreen.png" width="200" height="450"></td>
+     <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/MainScreenWithSearchBar.png" width="200" height="450"></td>
+     <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/detailScreen.png" width="200" height="450"></td
+  </tr>
+ </table>
 ---
 
 ### Gif
+<table align = "center">
+  <tr>
+     <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/PreviewVideo.gif" width="200"></td>
+  </tr>
+ </table>
 ![PreviewVideo](https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/PreviewVideo.gif)
 
 ### Preparing the project for publication in AppStore
