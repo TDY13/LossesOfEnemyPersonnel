@@ -1,3 +1,5 @@
+![LaunchScreen](https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/launchScreen.png
+
 # Preparing the project for publication in AppStore
 
 # 1.Functionality Completion:
