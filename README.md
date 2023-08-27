@@ -1,4 +1,4 @@
-![LaunchScreen](https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/launchScreen.png
+![LaunchScreen](https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/launchScreen.png)
 
 # Preparing the project for publication in AppStore
 
