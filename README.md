@@ -15,7 +15,7 @@
 ### Gif
 ![PreviewVideo](https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/PreviewVideo.gif)
 
-# Preparing the project for publication in AppStore
+### Preparing the project for publication in AppStore
 
 ### 1. Functionality Completion:
 Ensure that all core functions of your app are working smoothly without any errors and meet the requirements.
