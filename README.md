@@ -26,7 +26,6 @@
      <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/detailScreen.png" width="200" height="450"></td
   </tr>
  </table>
----
 
 ### Gif
 <table align = "center">
@@ -34,7 +33,6 @@
      <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/PreviewVideo.gif" width="200"></td>
   </tr>
  </table>
-![PreviewVideo](https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/PreviewVideo.gif)
 
 ### Preparing the project for publication in AppStore
 
