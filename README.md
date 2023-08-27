@@ -26,6 +26,7 @@
  </table>
  
  ### Gif
+ 
  <table align = "center">
   <tr>
      <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/PreviewVideo.gif" width="200"></td>                                                      </tr>
