@@ -5,7 +5,15 @@
 
 ### Preview
 
-<img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/launchScreen.png" width="200" height="450"> <img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding1.png" width="200" height="450"> <img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding2.png" width="200" height="450">
+<table align = "center">
+  <tr>
+     <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/launchScreen.png" width="200" height="450"></td>
+     <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding1.png" width="200" height="450"></td>
+     <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding2.png" width="200" height="450"></td
+  </tr>
+ </table>
+
+  <img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding2.png" width="200" height="450">
 
 <img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding3.png" width="200" height="450"> <img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding4.png" width="200" height="450"> <img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding5.png" width="200" height="450">
 
