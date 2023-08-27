@@ -25,6 +25,8 @@ struct R {
         static let day = "day"
         static let date = "date"
         
+        static let statisticsFor = "Statistics for "
+        static let unknownDate = "**.**.****"
         static let pow = "POW"
         static let unknownPOW = "POW - ?"
         static let averageOrcLosses = "Average Orc losses per day"

@@ -7,11 +7,13 @@
 
 import UIKit
 
-class OnboardingViewController: UIViewController {
+final class OnboardingViewController: UIViewController {
     private let mainView = OnboardingView()
     
     private var data: [OnboardingModelSection] = []
     private var currentPage = 0
+    
+    private let networkLayer = NetworkLayer()
     
     // MARK: - Functions
     override func loadView() {
@@ -34,7 +36,7 @@ class OnboardingViewController: UIViewController {
     }
     
     private func showMainScreen() {
-        let vc = MainScreenViewController()
+        let vc = MainScreenViewController(networkLayer: networkLayer)
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -51,11 +53,13 @@ class OnboardingViewController: UIViewController {
 
 //MARK: - UICollectionViewDelegate
 extension OnboardingViewController: UICollectionViewDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {}
 }
 
 //MARK: - UICollectionViewDataSource
 extension OnboardingViewController: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         data[section].items.count
     }
@@ -70,6 +74,7 @@ extension OnboardingViewController: UICollectionViewDataSource {
 
 // MARK: UICollectionViewDelegateFlowLayout
 extension OnboardingViewController: UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: mainView.collectionView.frame.width, height: mainView.collectionView.frame.height)
     }
@@ -77,6 +82,7 @@ extension OnboardingViewController: UICollectionViewDelegateFlowLayout {
 
 //MARK: - Action(s)
 extension OnboardingViewController {
+    
     @objc private func didTapContinueButton() {
         pageControlHandler()
     }

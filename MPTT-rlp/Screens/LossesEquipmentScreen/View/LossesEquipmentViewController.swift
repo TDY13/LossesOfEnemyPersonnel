@@ -7,15 +7,16 @@
 
 import UIKit
 
-class LossesEquipmentViewController: BaseViewController {
+final class LossesEquipmentViewController: BaseViewController {
     private let mainView = LossesEquipmentView()
+    private var equipmentData: [EquipmentModel]
     
-    private var equipmentData: [EquipmentModel] = []
     private var lossesEquipment: LossesEquipmentModel
     
     // MARK: - Functions
-    init(equipment: LossesEquipmentModel) {
+    init(equipment: LossesEquipmentModel, equipmentService: EquipmentService) {
         self.lossesEquipment = equipment
+        self.equipmentData = equipmentService.createEquipmentDataFromReflection(equipment)
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -34,44 +35,12 @@ class LossesEquipmentViewController: BaseViewController {
     
     private func initViewController() {
         navigationItem.leftBarButtonItem = nil
-        navigationItem.title = lossesEquipment.date.decodeDateFromString()
-        
-        equipmentData = createEquipmentDataFromReflection(lossesEquipment)
+        navigationItem.title = R.constant.statisticsFor + (lossesEquipment.date.decodeDateFromString() ?? R.constant.unknownDate)
         
         mainView.tableView.delegate = self
         mainView.tableView.dataSource = self
+        mainView.tableView.register(LossesEquipmentTopCell.self, forCellReuseIdentifier: LossesEquipmentTopCell.id)
         mainView.tableView.register(LossesEquipmentCell.self, forCellReuseIdentifier: LossesEquipmentCell.id)
-    }
-}
-
-//MARK: - Reflection
-extension LossesEquipmentViewController {
-    
-    private func createEquipmentDataFromReflection(_ lossesEquipment: LossesEquipmentModel) -> [EquipmentModel] {
-        let mirror = Mirror(reflecting: lossesEquipment)
-        return mirror.children.compactMap { child in
-            guard let label = child.label else {
-                return nil
-            }
-            
-            if label == R.constant.date || label == R.constant.day || label == R.constant.id {
-                return nil
-            }
-            
-            let words = label.split(separator: " ").map { String($0) }
-            let fieldName = words
-                .map { word in
-                    return word.prefix(1).uppercased() + word.dropFirst()
-                }
-                .joined(separator: " ")
-            
-            if let value = child.value as? Any? {
-                if let unwrappedValue = value {
-                    return EquipmentModel(name: fieldName, value: unwrappedValue)
-                }
-            }
-            return nil
-        }
     }
 }
 
@@ -80,14 +49,26 @@ extension LossesEquipmentViewController: UITableViewDelegate {}
 
 //MARK: - UITableViewDataSource
 extension LossesEquipmentViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        equipmentData.count
+        section == 0 ? 1 : equipmentData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: LossesEquipmentCell.id, for: indexPath) as? LossesEquipmentCell else { return UITableViewCell() }
-        let item = equipmentData[indexPath.row]
-        cell.configure(with: item)
-        return cell
+        switch indexPath.section {
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: LossesEquipmentTopCell.id, for: indexPath) as? LossesEquipmentTopCell else { return UITableViewCell() }
+            return cell
+        default:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: LossesEquipmentCell.id, for: indexPath) as? LossesEquipmentCell else { return UITableViewCell() }
+            let item = equipmentData[indexPath.row]
+            cell.configure(with: item)
+            return cell
+        }
+        
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+       return 2
     }
 }

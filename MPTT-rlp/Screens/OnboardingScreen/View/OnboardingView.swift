@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OnboardingView: UIView {
+final class OnboardingView: UIView {
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal

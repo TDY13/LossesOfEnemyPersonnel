@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LossesEquipmentCell: UITableViewCell {
+final class LossesEquipmentCell: UITableViewCell {
     static let id = String(describing: LossesEquipmentCell.self)
     
     private let imageContainerView: UIView = {

@@ -7,29 +7,19 @@
 
 import Foundation
 
-class EquipmentService {
+final class EquipmentService {
     private var lossesEquipments : LossesEquipment = []
     private var lossesEquipmentCorrection : LossesEquipmentCorrection = []
 
-    static let shared = EquipmentService()
+    private var networkLayer: NetworkLayer
     
     // MARK: - Functions
-    private init() {}
-    
-    func takeLossesEquipment() async throws {
-        do {
-            let equipmentData = try await NetworkLayer.shared.fetchDataAsync(from: R.URL.equipmentURL.setupURL(), modelType: LossesEquipmentModel.self)
-            self.lossesEquipments = equipmentData
-            self.lossesEquipments.sort { $0.day > $1.day }
-
-            try await getAllEquipmentCorrection()
-        } catch {
-            throw error
-        }
+    init(networkLayer: NetworkLayer) {
+        self.networkLayer = networkLayer
     }
     
     func takeLossesEquipment() async throws -> [LossesEquipmentModel] {
-        let equipmentData = try await NetworkLayer.shared.fetchDataAsync(from: R.URL.equipmentURL.setupURL(), modelType: LossesEquipmentModel.self)
+        let equipmentData = try await networkLayer.fetchDataAsync(from: R.URL.equipmentURL.setupURL(), modelType: LossesEquipmentModel.self)
         
         self.lossesEquipments = equipmentData
         try await getAllEquipmentCorrection()
@@ -37,9 +27,9 @@ class EquipmentService {
         return self.lossesEquipments
     }
     
-    func getAllEquipmentCorrection() async throws {
+    private func getAllEquipmentCorrection() async throws {
         do {
-            let equipmentCorrection = try await NetworkLayer.shared.fetchDataAsync(from: R.URL.equipmentCorrectionURL.setupURL(), modelType: LossesEquipmentCorrectionModel.self)
+            let equipmentCorrection = try await networkLayer.fetchDataAsync(from: R.URL.equipmentCorrectionURL.setupURL(), modelType: LossesEquipmentCorrectionModel.self)
             self.lossesEquipmentCorrection = equipmentCorrection
 
             self.updateMergedEquipment()
@@ -48,7 +38,7 @@ class EquipmentService {
         }
     }
 
-    func updateMergedEquipment() {
+    private func updateMergedEquipment() {
         self.lossesEquipmentCorrection.forEach { mergeEquipment in
             if let index = self.lossesEquipments.firstIndex(where: { $0.day == mergeEquipment.day }) {
                 let lossesEquipment = self.lossesEquipments[index]
@@ -75,6 +65,33 @@ class EquipmentService {
                     lossesEquipment.cruiseMissiles = cruiseMissiles + mergeEquipment.cruiseMissiles
                 }
             }
+        }
+    }
+    
+    func createEquipmentDataFromReflection(_ lossesEquipment: LossesEquipmentModel) -> [EquipmentModel] {
+        let mirror = Mirror(reflecting: lossesEquipment)
+        return mirror.children.compactMap { child in
+            guard let label = child.label else {
+                return nil
+            }
+            
+            if label == R.constant.date || label == R.constant.day || label == R.constant.id {
+                return nil
+            }
+            
+            let words = label.split(separator: " ").map { String($0) }
+            let fieldName = words
+                .map { word in
+                    return word.prefix(1).uppercased() + word.dropFirst()
+                }
+                .joined(separator: " ")
+            
+            if let value = child.value as? Any? {
+                if let unwrappedValue = value {
+                    return EquipmentModel(name: fieldName, value: unwrappedValue)
+                }
+            }
+            return nil
         }
     }
 }

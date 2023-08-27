@@ -11,10 +11,7 @@ protocol NetworkLayerProtocol {
     func fetchDataAsync<T: Decodable>(from url: URL, modelType: T.Type) async throws -> [T]
 }
 
-class NetworkLayer: NetworkLayerProtocol {
-    static let shared = NetworkLayer()
-    
-    private init() {}
+final class NetworkLayer: NetworkLayerProtocol {
     
     func fetchDataAsync<T: Decodable>(from url: URL, modelType: T.Type) async throws -> [T] {
         let (data, response) = try await URLSession.shared.data(from: url)
@@ -27,7 +24,6 @@ class NetworkLayer: NetworkLayerProtocol {
         do {
             let decoder = JSONDecoder()
             let parsedData = try decoder.decode([T].self, from: data)
-            
             return parsedData
         } catch {
             throw NetworkError.invalidData

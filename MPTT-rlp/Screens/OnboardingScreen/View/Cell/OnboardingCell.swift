@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OnboardingCell: UICollectionViewCell {
+final class OnboardingCell: UICollectionViewCell {
     static let id = String(describing: OnboardingCell.self)
     
     private let topImage: UIImageView = {
@@ -32,7 +32,7 @@ class OnboardingCell: UICollectionViewCell {
         obj.numberOfLines = 0
         obj.textColor = .white
         obj.textAlignment = .center
-        obj.font = .systemFont(ofSize: 17, weight: .regular)
+        obj.font = .systemFont(ofSize: 15, weight: .regular)
         obj.translatesAutoresizingMaskIntoConstraints = false
         return obj
     }()

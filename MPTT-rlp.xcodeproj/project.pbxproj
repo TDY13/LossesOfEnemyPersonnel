@@ -29,6 +29,8 @@
 		178DD24A2A9B95CF00E552D2 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178DD2492A9B95CF00E552D2 /* NetworkLayer.swift */; };
 		178DD24F2A9BB1F500E552D2 /* EquipmentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178DD24E2A9BB1F500E552D2 /* EquipmentService.swift */; };
 		178DD2542A9BD35400E552D2 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178DD2532A9BD35400E552D2 /* NetworkError.swift */; };
+		178DD2562A9BD8D600E552D2 /* LossesEquipmentCorrectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178DD2552A9BD8D600E552D2 /* LossesEquipmentCorrectionModel.swift */; };
+		178DD2582A9BE2A300E552D2 /* LossesEquipmentTopCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178DD2572A9BE2A300E552D2 /* LossesEquipmentTopCell.swift */; };
 		17D4CFFD2A9B47550089D6EC /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D4CFFC2A9B47550089D6EC /* String+Extension.swift */; };
 		17E095FD2A99BBCB00283F6C /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E095FC2A99BBCB00283F6C /* OnboardingViewController.swift */; };
 		17E095FF2A99BBD500283F6C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E095FE2A99BBD500283F6C /* OnboardingView.swift */; };
@@ -62,6 +64,8 @@
 		178DD2492A9B95CF00E552D2 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		178DD24E2A9BB1F500E552D2 /* EquipmentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentService.swift; sourceTree = "<group>"; };
 		178DD2532A9BD35400E552D2 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		178DD2552A9BD8D600E552D2 /* LossesEquipmentCorrectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesEquipmentCorrectionModel.swift; sourceTree = "<group>"; };
+		178DD2572A9BE2A300E552D2 /* LossesEquipmentTopCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesEquipmentTopCell.swift; sourceTree = "<group>"; };
 		17D4CFFC2A9B47550089D6EC /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		17E095FC2A99BBCB00283F6C /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		17E095FE2A99BBD500283F6C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -111,7 +115,6 @@
 				171691F82A93AF730010F032 /* Application */,
 				171691FE2A93B0A40010F032 /* Screens */,
 				171692042A93B1740010F032 /* Base */,
-				178DD2482A9B950300E552D2 /* NetworkLayer */,
 				171691FF2A93B0CB0010F032 /* Services */,
 				171691F72A93AF6E0010F032 /* Resources */,
 			);
@@ -162,6 +165,7 @@
 		171691FF2A93B0CB0010F032 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				178DD2482A9B950300E552D2 /* NetworkLayer */,
 				171692002A93B0D20010F032 /* Extensions */,
 			);
 			path = Services;
@@ -242,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				1716921D2A93C4990010F032 /* LossesEquipmentModel.swift */,
+				178DD2552A9BD8D600E552D2 /* LossesEquipmentCorrectionModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -260,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				1716922A2A93D53D0010F032 /* LossesEquipmentCell.swift */,
+				178DD2572A9BE2A300E552D2 /* LossesEquipmentTopCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -407,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				171692142A93B4020010F032 /* LossesPersonnelCell.swift in Sources */,
+				178DD2562A9BD8D600E552D2 /* LossesEquipmentCorrectionModel.swift in Sources */,
 				1716922B2A93D53D0010F032 /* LossesEquipmentCell.swift in Sources */,
 				178DD2542A9BD35400E552D2 /* NetworkError.swift in Sources */,
 				171692072A93B1890010F032 /* BaseViewController.swift in Sources */,
@@ -428,6 +435,7 @@
 				178DD24F2A9BB1F500E552D2 /* EquipmentService.swift in Sources */,
 				171692282A93CECC0010F032 /* LossesEquipmentView.swift in Sources */,
 				17E095FF2A99BBD500283F6C /* OnboardingView.swift in Sources */,
+				178DD2582A9BE2A300E552D2 /* LossesEquipmentTopCell.swift in Sources */,
 				171692102A93B2D10010F032 /* MainScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

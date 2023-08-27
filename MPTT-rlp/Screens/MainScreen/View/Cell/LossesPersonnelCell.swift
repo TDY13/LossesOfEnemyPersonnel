@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LossesPersonnelCell: UITableViewCell {
+final class LossesPersonnelCell: UITableViewCell {
     static let id = String(describing: LossesPersonnelCell.self)
     
     private let dayContainerView: UIView = {

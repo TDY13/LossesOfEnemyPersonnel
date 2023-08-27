@@ -15,9 +15,20 @@ final class MainScreenViewController: BaseSearchViewController {
     
     private var dataSource: UITableViewDiffableDataSource<Int, AnyHashable>?
     
-    private var selectedDay: Int?
+    private var networkLayer: NetworkLayer
+    private var equipmentService: EquipmentService
     
     // MARK: - Functions
+    init(networkLayer: NetworkLayer) {
+        self.networkLayer = networkLayer
+        self.equipmentService = EquipmentService(networkLayer: networkLayer)
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func loadView() {
         view = mainView
     }
@@ -27,7 +38,7 @@ final class MainScreenViewController: BaseSearchViewController {
         initViewController()
     }
     
-    private func initViewController()  {
+    private func initViewController() {
         navigationItem.title = R.constant.lossesPersonnel
         
         configTableView()
@@ -41,16 +52,17 @@ final class MainScreenViewController: BaseSearchViewController {
     }
    
     private func showLossesEquipmentScreen(with data: LossesEquipmentModel) {
-        let vc = LossesEquipmentViewController(equipment: data)
+        let vc = LossesEquipmentViewController(equipment: data, equipmentService: equipmentService)
         navigationController?.pushViewController(vc, animated: true)
     }
 }
 
-//MARK: - FetchData
+//MARK: - FetchDataService
 extension MainScreenViewController {
+    
     private func fetchPersonnelDataAndProcess() async throws {
         do {
-            self.lossesPersonnel = try await NetworkLayer.shared.fetchDataAsync(from: R.URL.personnelURL.setupURL(), modelType: LossesPersonnelModel.self)
+            self.lossesPersonnel = try await networkLayer.fetchDataAsync(from: R.URL.personnelURL.setupURL(), modelType: LossesPersonnelModel.self)
             self.updateDataSource()
         } catch {
             self.lossesPersonnel = Bundle.main.decode([LossesPersonnelModel].self, from: R.constant.personnelJSON)
@@ -58,9 +70,9 @@ extension MainScreenViewController {
         }
     }
     
-    func fetchEquipmentDataAndProcess() async throws {
+    private func fetchEquipmentDataAndProcess() async throws {
         do {
-            self.lossesEquipment = try await EquipmentService.shared.takeLossesEquipment()
+            self.lossesEquipment = try await equipmentService.takeLossesEquipment()
         } catch {
             self.lossesPersonnel = Bundle.main.decode([LossesPersonnelModel].self, from: R.constant.equipJSON)
         }
@@ -71,9 +83,7 @@ extension MainScreenViewController {
 extension MainScreenViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedDay = lossesPersonnel[indexPath.row].day
-        
-        if let selectedData = lossesEquipment.first(where: { $0.day == selectedDay }) {
+        if let selectedData = lossesEquipment.first(where: { $0.day == lossesPersonnel[indexPath.row].day }) {
             showLossesEquipmentScreen(with: selectedData)
         }
     }
@@ -83,7 +93,6 @@ extension MainScreenViewController: UITableViewDelegate {
 extension MainScreenViewController {
     
     private func configTableView() {
-        
         mainView.tableView.delegate = self
         mainView.tableView.register(LossesPersonnelCell.self, forCellReuseIdentifier: LossesPersonnelCell.id)
         
@@ -110,6 +119,7 @@ extension MainScreenViewController {
 
 // MARK: - UISearchBarDelegate
 extension MainScreenViewController {
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchWorkItem?.cancel()
         
