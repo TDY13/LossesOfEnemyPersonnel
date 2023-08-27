@@ -10,8 +10,7 @@
      <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/launchScreen.png" width="200" height="450"></td>
      <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding1.png" width="200" height="450"></td>
      <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding2.png" width="200" height="450"></td
-     <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding3.png" width="200" height="450"></td>                                             <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding4.png" width="200" height="450"></td>                                                                                       
-  </tr>
+     <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding3.png" width="200" height="450"></td>                                             <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding4.png" width="200" height="450"></td>                                          </tr>
  </table>
 <table align = "center">
   <tr>
