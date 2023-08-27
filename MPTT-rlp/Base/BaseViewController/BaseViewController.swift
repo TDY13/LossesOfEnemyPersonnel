@@ -40,7 +40,7 @@ class BaseViewController: UIViewController {
     }
     
     private func presentCharityScreen() {
-        if let url = URL(string: R.constant.united24) {
+        if let url = URL(string: R.URL.united24URL) {
             if UIApplication.shared.canOpenURL(url) {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }

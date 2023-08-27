@@ -33,4 +33,9 @@ extension String {
             return nil
         }
     }
+    
+    func setupURL() -> URL {
+        guard let baseURL = URL(string: R.URL.baseURL) else { return URL(string: self) ?? URL(fileURLWithPath: "") }
+        return baseURL.appendingPathComponent(self)
+    }
 }

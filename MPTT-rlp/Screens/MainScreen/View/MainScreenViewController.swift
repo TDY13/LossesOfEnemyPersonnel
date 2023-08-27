@@ -25,29 +25,44 @@ final class MainScreenViewController: BaseSearchViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initViewController()
+        
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        fetchData()
-    }
-    
-    private func initViewController() {
+    private func initViewController()  {
         navigationItem.title = R.constant.lossesPersonnel
         configTableView()
+        Task {
+            do {
+                try await fetchPersonnelDataAndProcess()
+                try await fetchEquipmentDataAndProcess()
+            }
+        }
     }
-    
-    private func fetchData() {
-        lossesPersonnel = Bundle.main.decode([LossesPersonnelModel].self,
-                                             from: R.constant.personnelJSON)
-        lossesEquipment = Bundle.main.decode([LossesEquipmentModel].self,
-                                             from: R.constant.equipJSON)
-        updateDataSource()
-    }
-    
+   
     private func showLossesEquipmentScreen(with data: LossesEquipmentModel) {
         let vc = LossesEquipmentViewController(equipment: data)
         navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+//MARK: - FetchData
+extension MainScreenViewController {
+    private func fetchPersonnelDataAndProcess() async throws {
+        do {
+            self.lossesPersonnel = try await NetworkLayer.shared.fetchDataAsync(from: R.URL.personnelURL.setupURL(), modelType: LossesPersonnelModel.self)
+            self.updateDataSource()
+        } catch {
+            self.lossesPersonnel = Bundle.main.decode([LossesPersonnelModel].self, from: R.constant.personnelJSON)
+            self.updateDataSource()
+        }
+    }
+    
+    func fetchEquipmentDataAndProcess() async throws {
+        do {
+            self.lossesEquipment = try await NetworkLayer.shared.fetchDataAsync(from: R.URL.equipmentURL.setupURL(), modelType: LossesEquipmentModel.self)
+        } catch {
+            self.lossesPersonnel = Bundle.main.decode([LossesPersonnelModel].self, from: R.constant.equipJSON)
+        }
     }
 }
 

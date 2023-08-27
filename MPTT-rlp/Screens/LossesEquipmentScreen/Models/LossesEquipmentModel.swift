@@ -7,18 +7,22 @@
 
 import Foundation
 
-struct LossesEquipmentModel: Codable, Hashable, Identifiable {
+typealias LossesEquipment = [LossesEquipmentModel]
+
+final class LossesEquipmentModel: Codable, Hashable, Identifiable {
+    
     let id = UUID()
     let date: String
-    let day, aircraft, helicopter, tank: Int
-    let apc, fieldArtillery, mrl: Int
-    let militaryAuto, fuelTank: Int?
-    let drone, navalShip, antiAircraftWarfare: Int
-    let specialEquipment, mobileSRBMSystem: Int?
-    let greatestLossesDirection: String?
-    let vehiclesAndFuelTanks, cruiseMissiles: Int?
+    var day, aircraft, helicopter, tank: Int
+    var apc, fieldArtillery, mrl: Int
+    var militaryAuto, fuelTank: Int?
+    var drone, navalShip, antiAircraftWarfare: Int
+    var specialEquipment, mobileSRBMSystem: Int?
+    var greatestLossesDirection: String?
+    var vehiclesAndFuelTanks, cruiseMissiles: Int?
     
-    enum CodingKeys: String, CodingKey {
+// MARK: - CodingKey
+    enum CodingKeys: String, CodingKey, CaseIterable {
         case date, day, aircraft, helicopter, tank
         case apc = "APC"
         case fieldArtillery = "field artillery"
@@ -31,6 +35,39 @@ struct LossesEquipmentModel: Codable, Hashable, Identifiable {
         case specialEquipment = "special equipment"
         case mobileSRBMSystem = "mobile SRBM system"
         case greatestLossesDirection = "greatest losses direction"
+        case vehiclesAndFuelTanks = "vehicles and fuel tanks"
+        case cruiseMissiles = "cruise missiles"
+    }
+    
+    static func == (lhs: LossesEquipmentModel, rhs: LossesEquipmentModel) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}
+
+typealias LossesEquipmentCorrection = [LossesEquipmentCorrectionModel]
+
+final class LossesEquipmentCorrectionModel: Codable {
+    
+    let date: String
+    let day, aircraft, helicopter, tank: Int
+    let apc, fieldArtillery, mrl, drone: Int
+    let navalShip, antiAircraftWarfare, specialEquipment, vehiclesAndFuelTanks: Int
+    let cruiseMissiles: Int
+
+// MARK: - CodingKey
+    enum CodingKeys: String, CodingKey {
+        case date, day, aircraft, helicopter, tank
+        case apc = "APC"
+        case fieldArtillery = "field artillery"
+        case mrl = "MRL"
+        case drone
+        case navalShip = "naval ship"
+        case antiAircraftWarfare = "anti-aircraft warfare"
+        case specialEquipment = "special equipment"
         case vehiclesAndFuelTanks = "vehicles and fuel tanks"
         case cruiseMissiles = "cruise missiles"
     }

@@ -40,8 +40,14 @@ struct R {
         
         static let enemyLosses = "ENEMY LOSSES AMOUNTED TO:"
         static let info = "THE GENERAL STAFF OF THE AF of UKRAINE INFORMS"
-        
-        static let united24 = "https://u24.gov.ua"
+    }
+    
+    struct URL {
+        static let baseURL = "https://raw.githubusercontent.com/PetroIvaniuk/2022-Ukraine-Russia-War-Dataset/main/data/"
+        static let united24URL = "https://u24.gov.ua"
+        static let personnelURL = "russia_losses_personnel.json"
+        static let equipmentURL = "russia_losses_equipment.json"
+        static let equipmentCorrectionURL = "russia_losses_equipment_correction.json"
     }
 }
 
