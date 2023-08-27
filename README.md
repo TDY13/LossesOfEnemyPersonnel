@@ -7,6 +7,8 @@
 <img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/MainScreen.png" width="200" height="450"> <img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/MainScreenWithSearchBar.png" width="200" height="450"> <img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/detailScreen.png" width="200" height="450">
 ---
 
+![PreviewVideo](https://github.com/TDY13/LossesOfEnemyPersonnel/assets/92026815/3abb3ce3-7fdb-41cf-9a11-5661aefdb586)
+
 # Preparing the project for publication in AppStore
 
 # 1.Functionality Completion:
