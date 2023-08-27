@@ -10,28 +10,16 @@
      <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/launchScreen.png" width="200" height="450"></td>
      <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding1.png" width="200" height="450"></td>
      <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding2.png" width="200" height="450"></td
+     <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding3.png" width="200" height="450"></td>                                             <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding4.png" width="200" height="450"></td>                                                                                       
   </tr>
  </table>
 <table align = "center">
   <tr>
-     <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding3.png" width="200" height="450"></td>
-     <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding4.png" width="200" height="450"></td>
      <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding5.png" width="200" height="450"></td
-  </tr>
- </table>
- <table align = "center">
-  <tr>
      <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/MainScreen.png" width="200" height="450"></td>
      <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/MainScreenWithSearchBar.png" width="200" height="450"></td>
      <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/detailScreen.png" width="200" height="450"></td
-  </tr>
- </table>
-
-### Gif
-<table align = "center">
-  <tr>
-     <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/PreviewVideo.gif" width="200"></td>
-  </tr>
+     <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/PreviewVideo.gif" width="200"></td>                                                      </tr>
  </table>
 
 ### Preparing the project for publication in AppStore
