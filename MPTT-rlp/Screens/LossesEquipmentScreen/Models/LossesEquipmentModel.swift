@@ -9,6 +9,7 @@ import Foundation
 
 typealias LossesEquipment = [LossesEquipmentModel]
 
+//DTO
 final class LossesEquipmentModel: Codable, Hashable, Identifiable {
     
     let id = UUID()

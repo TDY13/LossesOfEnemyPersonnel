@@ -7,6 +7,7 @@
 
 import Foundation
 
+//DTO
 struct LossesPersonnelModel: Codable, Hashable {
     let date: String
     let day, personnel: Int

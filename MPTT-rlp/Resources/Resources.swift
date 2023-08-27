@@ -43,11 +43,11 @@ struct R {
     }
     
     struct URL {
-        static let baseURL = "https://raw.githubusercontent.com/PetroIvaniuk/2022-Ukraine-Russia-War-Dataset/main/data/"
         static let united24URL = "https://u24.gov.ua"
         static let personnelURL = "russia_losses_personnel.json"
         static let equipmentURL = "russia_losses_equipment.json"
         static let equipmentCorrectionURL = "russia_losses_equipment_correction.json"
+        static let baseURL = "https://raw.githubusercontent.com/PetroIvaniuk/2022-Ukraine-Russia-War-Dataset/main/data/"
     }
 }
 

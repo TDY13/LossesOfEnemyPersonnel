@@ -25,12 +25,13 @@ final class MainScreenViewController: BaseSearchViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initViewController()
-        
     }
     
     private func initViewController()  {
         navigationItem.title = R.constant.lossesPersonnel
+        
         configTableView()
+        
         Task {
             do {
                 try await fetchPersonnelDataAndProcess()
@@ -59,7 +60,7 @@ extension MainScreenViewController {
     
     func fetchEquipmentDataAndProcess() async throws {
         do {
-            self.lossesEquipment = try await NetworkLayer.shared.fetchDataAsync(from: R.URL.equipmentURL.setupURL(), modelType: LossesEquipmentModel.self)
+            self.lossesEquipment = try await EquipmentService.shared.takeLossesEquipment()
         } catch {
             self.lossesPersonnel = Bundle.main.decode([LossesPersonnelModel].self, from: R.constant.equipJSON)
         }
