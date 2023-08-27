@@ -1,16 +1,38 @@
+# INFO
+* [Prewiew](#Preview)
+* [Gif](#Gif)
+* [Preparing the project for publication in AppStore](#Preparing-the-project-for-publication-in-AppStore)
+
 ### Preview
 
-<img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/launchScreen.png" width="200" height="450"> <img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding1.png" width="200" height="450"> <img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding2.png" width="200" height="450">
+<table align = "center">
+  <tr>
+     <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/launchScreen.png" width="200" height="450"></td>
+     <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding1.png" width="200" height="450"></td>
+     <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding2.png" width="200" height="450"></td
+    </tr>
+ </table>
+ <table align = "center">
+  <tr>
+     <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding3.png" width="200" height="450"></td>                                             <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding4.png" width="200" height="450"></td>
+     <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding5.png" width="200" height="450"></td
+  </tr>
+ </table>
+<table align = "center">
+  <tr>
+     <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/MainScreen.png" width="200" height="450"></td>
+     <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/MainScreenWithSearchBar.png" width="200" height="450"></td>
+     <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/detailScreen.png" width="200" height="450"></td                                          </tr>
+ </table>
+ 
+ ### Gif
+ 
+ <table align = "center">
+  <tr>
+     <td><img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/PreviewVideo.gif" width="200"></td>                                                      </tr>
+ </table>
 
-<img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding3.png" width="200" height="450"> <img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding4.png" width="200" height="450"> <img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding5.png" width="200" height="450">
-
-<img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/MainScreen.png" width="200" height="450"> <img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/MainScreenWithSearchBar.png" width="200" height="450"> <img src="https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/detailScreen.png" width="200" height="450">
----
-
-### Gif
-![PreviewVideo](https://github.com/TDY13/LossesOfEnemyPersonnel/assets/92026815/3abb3ce3-7fdb-41cf-9a11-5661aefdb586)
-
-# Preparing the project for publication in AppStore
+### Preparing the project for publication in AppStore
 
 ### 1. Functionality Completion:
 Ensure that all core functions of your app are working smoothly without any errors and meet the requirements.
