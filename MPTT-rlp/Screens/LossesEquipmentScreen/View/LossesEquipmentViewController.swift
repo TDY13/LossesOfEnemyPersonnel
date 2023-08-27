@@ -13,7 +13,7 @@ final class LossesEquipmentViewController: BaseViewController {
     
     private var lossesEquipment: LossesEquipmentModel
     
-    // MARK: - Functions
+    // MARK: - Function(s)
     init(equipment: LossesEquipmentModel, equipmentService: EquipmentService) {
         self.lossesEquipment = equipment
         self.equipmentData = equipmentService.createEquipmentDataFromReflection(equipment)
@@ -69,6 +69,6 @@ extension LossesEquipmentViewController: UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-       return 2
+        return 2
     }
 }

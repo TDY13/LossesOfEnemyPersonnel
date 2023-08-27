@@ -18,7 +18,7 @@ final class MainScreenViewController: BaseSearchViewController {
     private var networkLayer: NetworkLayer
     private var equipmentService: EquipmentService
     
-    // MARK: - Functions
+    // MARK: - Function(s)
     init(networkLayer: NetworkLayer) {
         self.networkLayer = networkLayer
         self.equipmentService = EquipmentService(networkLayer: networkLayer)
@@ -50,7 +50,7 @@ final class MainScreenViewController: BaseSearchViewController {
             }
         }
     }
-   
+    
     private func showLossesEquipmentScreen(with data: LossesEquipmentModel) {
         let vc = LossesEquipmentViewController(equipment: data, equipmentService: equipmentService)
         navigationController?.pushViewController(vc, animated: true)

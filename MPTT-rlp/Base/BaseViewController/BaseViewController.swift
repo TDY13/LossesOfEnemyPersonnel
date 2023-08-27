@@ -9,13 +9,14 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
+    // MARK: - Function(s)
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpSubviews()
         setUpNavigationBarAppearance()
     }
     
-    func setUpNavigationBarAppearance() {
+    private func setUpNavigationBarAppearance() {
         let standardAppearance = UINavigationBarAppearance()
         standardAppearance.configureWithTransparentBackground()
         standardAppearance.backgroundColor = .white

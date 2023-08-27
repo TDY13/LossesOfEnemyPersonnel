@@ -15,7 +15,7 @@ final class OnboardingViewController: UIViewController {
     
     private let networkLayer = NetworkLayer()
     
-    // MARK: - Functions
+    // MARK: - Function(s)
     override func loadView() {
         super.loadView()
         view = mainView

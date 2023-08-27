@@ -12,14 +12,14 @@ class BaseSearchViewController: BaseViewController {
     var maxSearchTextLength = 4
     var searchWorkItem: DispatchWorkItem?
     
-    // MARK: - Method(s)
+    // MARK: - Function(s)
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpSubviews()
         setUpSearchBar()
     }
     
-    func setUpSearchBar() {
+    private func setUpSearchBar() {
         navigationItem.searchController = UISearchController()
         navigationItem.searchController?.searchBar.delegate = self
         navigationItem.searchController?.searchBar.keyboardType = .numberPad

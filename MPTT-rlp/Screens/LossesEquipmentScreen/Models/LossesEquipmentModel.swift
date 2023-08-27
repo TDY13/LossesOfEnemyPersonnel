@@ -48,8 +48,3 @@ final class LossesEquipmentModel: Codable, Hashable, Identifiable {
         hasher.combine(id)
     }
 }
-
-struct EquipmentModel {
-    let name: String
-    let value: Any?
-}

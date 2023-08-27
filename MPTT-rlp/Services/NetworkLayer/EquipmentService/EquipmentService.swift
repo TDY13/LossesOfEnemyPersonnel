@@ -13,7 +13,7 @@ final class EquipmentService {
 
     private var networkLayer: NetworkLayer
     
-    // MARK: - Functions
+    // MARK: - Function(s)
     init(networkLayer: NetworkLayer) {
         self.networkLayer = networkLayer
     }

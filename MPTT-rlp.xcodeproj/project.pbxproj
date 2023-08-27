@@ -26,6 +26,7 @@
 		171692272A93CECC0010F032 /* LossesEquipmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171692252A93CECC0010F032 /* LossesEquipmentViewController.swift */; };
 		171692282A93CECC0010F032 /* LossesEquipmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171692262A93CECC0010F032 /* LossesEquipmentView.swift */; };
 		1716922B2A93D53D0010F032 /* LossesEquipmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1716922A2A93D53D0010F032 /* LossesEquipmentCell.swift */; };
+		178741622A9BE5A300F8FC50 /* EquipmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178741612A9BE5A300F8FC50 /* EquipmentModel.swift */; };
 		178DD24A2A9B95CF00E552D2 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178DD2492A9B95CF00E552D2 /* NetworkLayer.swift */; };
 		178DD24F2A9BB1F500E552D2 /* EquipmentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178DD24E2A9BB1F500E552D2 /* EquipmentService.swift */; };
 		178DD2542A9BD35400E552D2 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178DD2532A9BD35400E552D2 /* NetworkError.swift */; };
@@ -61,6 +62,7 @@
 		171692252A93CECC0010F032 /* LossesEquipmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LossesEquipmentViewController.swift; sourceTree = "<group>"; };
 		171692262A93CECC0010F032 /* LossesEquipmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LossesEquipmentView.swift; sourceTree = "<group>"; };
 		1716922A2A93D53D0010F032 /* LossesEquipmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesEquipmentCell.swift; sourceTree = "<group>"; };
+		178741612A9BE5A300F8FC50 /* EquipmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentModel.swift; sourceTree = "<group>"; };
 		178DD2492A9B95CF00E552D2 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		178DD24E2A9BB1F500E552D2 /* EquipmentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentService.swift; sourceTree = "<group>"; };
 		178DD2532A9BD35400E552D2 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			children = (
 				1716921D2A93C4990010F032 /* LossesEquipmentModel.swift */,
 				178DD2552A9BD8D600E552D2 /* LossesEquipmentCorrectionModel.swift */,
+				178741612A9BE5A300F8FC50 /* EquipmentModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 			files = (
 				171692142A93B4020010F032 /* LossesPersonnelCell.swift in Sources */,
 				178DD2562A9BD8D600E552D2 /* LossesEquipmentCorrectionModel.swift in Sources */,
+				178741622A9BE5A300F8FC50 /* EquipmentModel.swift in Sources */,
 				1716922B2A93D53D0010F032 /* LossesEquipmentCell.swift in Sources */,
 				178DD2542A9BD35400E552D2 /* NetworkError.swift in Sources */,
 				171692072A93B1890010F032 /* BaseViewController.swift in Sources */,

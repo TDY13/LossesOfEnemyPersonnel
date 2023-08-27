@@ -8,6 +8,7 @@
 import Foundation
 
 extension String {
+    
     func splitCamelCase() -> String {
         return self
             .enumerated()
