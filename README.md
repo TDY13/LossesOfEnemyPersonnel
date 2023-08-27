@@ -8,7 +8,7 @@
 ---
 
 ### Gif
-![PreviewVideo](https://github.com/TDY13/LossesOfEnemyPersonnel/assets/92026815/3abb3ce3-7fdb-41cf-9a11-5661aefdb586)
+![PreviewVideo](https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/PreviewVideo.gif)
 
 # Preparing the project for publication in AppStore
 
