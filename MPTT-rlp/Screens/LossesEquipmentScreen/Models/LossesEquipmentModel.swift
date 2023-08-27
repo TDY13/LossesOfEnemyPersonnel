@@ -17,7 +17,7 @@ struct LossesEquipmentModel: Codable, Hashable, Identifiable {
     let specialEquipment, mobileSRBMSystem: Int?
     let greatestLossesDirection: String?
     let vehiclesAndFuelTanks, cruiseMissiles: Int?
-
+    
     enum CodingKeys: String, CodingKey {
         case date, day, aircraft, helicopter, tank
         case apc = "APC"
@@ -34,4 +34,9 @@ struct LossesEquipmentModel: Codable, Hashable, Identifiable {
         case vehiclesAndFuelTanks = "vehicles and fuel tanks"
         case cruiseMissiles = "cruise missiles"
     }
+}
+
+struct EquipmentModel {
+    let name: String
+    let value: Any?
 }

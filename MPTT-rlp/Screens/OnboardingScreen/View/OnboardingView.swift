@@ -42,7 +42,7 @@ class OnboardingView: UIView {
     
     private let topBackgroundView: UIView = {
         let obj = UIView()
-        obj.backgroundColor = .systemBlue.withAlphaComponent(0.1)
+        obj.backgroundColor = .systemBlue.withAlphaComponent(0.25)
         obj.translatesAutoresizingMaskIntoConstraints = false
         return obj
     }()

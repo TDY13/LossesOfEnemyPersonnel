@@ -12,7 +12,7 @@ struct LossesPersonnelModel: Codable, Hashable {
     let day, personnel: Int
     let lossesPersonnel: Personnel
     let pow: Int?
-
+    
     enum CodingKeys: String, CodingKey {
         case date, day, personnel
         case lossesPersonnel = "personnel*"

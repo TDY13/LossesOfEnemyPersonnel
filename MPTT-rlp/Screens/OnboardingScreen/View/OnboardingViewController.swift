@@ -6,14 +6,14 @@
 //
 
 import UIKit
-import StoreKit
 
 class OnboardingViewController: UIViewController {
     private let mainView = OnboardingView()
     
     private var data: [OnboardingModelSection] = []
     private var currentPage = 0
-
+    
+    // MARK: - Functions
     override func loadView() {
         super.loadView()
         view = mainView
@@ -25,20 +25,33 @@ class OnboardingViewController: UIViewController {
     }
     
     private func initViewController() {
-        data = Bundle.main.decode([OnboardingModelSection].self, from: "onboarding.json")
+        data = Bundle.main.decode([OnboardingModelSection].self, from: R.constant.onboardingJSON)
         
         mainView.collectionView.delegate = self
         mainView.collectionView.dataSource = self
         mainView.collectionView.register(OnboardingCell.self, forCellWithReuseIdentifier: OnboardingCell.id)
         mainView.continueButton.addTarget(self, action: #selector(didTapContinueButton), for: .touchUpInside)
     }
+    
+    private func showMainScreen() {
+        let vc = MainScreenViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func pageControlHandler() {
+        currentPage += 1
+        mainView.pageControl.currentPage = currentPage
+        if currentPage < data[0].items.count {
+            mainView.collectionView.scrollToItem(at: IndexPath(row: currentPage, section: 0), at: .centeredHorizontally, animated: true)
+        } else {
+            showMainScreen()
+        }
+    }
 }
 
 //MARK: - UICollectionViewDelegate
 extension OnboardingViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("index - ", indexPath.row)
-    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {}
 }
 
 //MARK: - UICollectionViewDataSource
@@ -65,16 +78,6 @@ extension OnboardingViewController: UICollectionViewDelegateFlowLayout {
 //MARK: - Action(s)
 extension OnboardingViewController {
     @objc private func didTapContinueButton() {
-//        if currentPage == 2 {
-//            SKStoreReviewController.requestReview()
-//        }
-        currentPage += 1
-        mainView.pageControl.currentPage = currentPage
-        if currentPage < data[0].items.count {
-            mainView.collectionView.scrollToItem(at: IndexPath(row: currentPage, section: 0), at: .centeredHorizontally, animated: true)
-        } else {
-            let vc = MainScreenViewController()
-            navigationController?.pushViewController(vc, animated: true)
-        }
+        pageControlHandler()
     }
 }

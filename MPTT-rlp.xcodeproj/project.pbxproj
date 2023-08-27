@@ -26,6 +26,7 @@
 		171692272A93CECC0010F032 /* LossesEquipmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171692252A93CECC0010F032 /* LossesEquipmentViewController.swift */; };
 		171692282A93CECC0010F032 /* LossesEquipmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171692262A93CECC0010F032 /* LossesEquipmentView.swift */; };
 		1716922B2A93D53D0010F032 /* LossesEquipmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1716922A2A93D53D0010F032 /* LossesEquipmentCell.swift */; };
+		17D4CFFD2A9B47550089D6EC /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D4CFFC2A9B47550089D6EC /* String+Extension.swift */; };
 		17E095FD2A99BBCB00283F6C /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E095FC2A99BBCB00283F6C /* OnboardingViewController.swift */; };
 		17E095FF2A99BBD500283F6C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E095FE2A99BBD500283F6C /* OnboardingView.swift */; };
 		17E096022A99C0D400283F6C /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E096012A99C0D400283F6C /* OnboardingCell.swift */; };
@@ -55,6 +56,7 @@
 		171692252A93CECC0010F032 /* LossesEquipmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LossesEquipmentViewController.swift; sourceTree = "<group>"; };
 		171692262A93CECC0010F032 /* LossesEquipmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LossesEquipmentView.swift; sourceTree = "<group>"; };
 		1716922A2A93D53D0010F032 /* LossesEquipmentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LossesEquipmentCell.swift; sourceTree = "<group>"; };
+		17D4CFFC2A9B47550089D6EC /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		17E095FC2A99BBCB00283F6C /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		17E095FE2A99BBD500283F6C /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		17E096012A99C0D400283F6C /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
@@ -146,7 +148,6 @@
 				17E095F92A99BB9C00283F6C /* OnboardingScreen */,
 				1716920A2A93B2D00010F032 /* MainScreen */,
 				171692212A93CECC0010F032 /* LossesEquipmentScreen */,
-				17E096032A9A1D8500283F6C /* AreaChart */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -164,6 +165,7 @@
 			children = (
 				171692022A93B1080010F032 /* Bundle+Extension.swift */,
 				171692172A93BB2E0010F032 /* UIColor+Extension.swift */,
+				17D4CFFC2A9B47550089D6EC /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -290,13 +292,6 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		17E096032A9A1D8500283F6C /* AreaChart */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AreaChart;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -378,6 +373,7 @@
 				171692182A93BB2E0010F032 /* UIColor+Extension.swift in Sources */,
 				171692162A93BA6E0010F032 /* Resources.swift in Sources */,
 				17F0DCA02A9A2FFC00A22738 /* OnboardingModel.swift in Sources */,
+				17D4CFFD2A9B47550089D6EC /* String+Extension.swift in Sources */,
 				170C7AB52A967CA90033D18F /* BaseSearchViewController.swift in Sources */,
 				171691E42A93AF3C0010F032 /* AppDelegate.swift in Sources */,
 				171692272A93CECC0010F032 /* LossesEquipmentViewController.swift in Sources */,

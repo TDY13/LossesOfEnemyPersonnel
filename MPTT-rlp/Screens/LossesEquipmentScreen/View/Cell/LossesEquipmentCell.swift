@@ -108,7 +108,7 @@ class LossesEquipmentCell: UITableViewCell {
     func configure(with item: EquipmentModel) {
         self.image.image = UIImage(named: item.name)?.withTintColor(.white, renderingMode: .alwaysOriginal)
         
-        equipmentLabel.text = splitCamelCase(item.name)
+        equipmentLabel.text = item.name.splitCamelCase()
         if let count = item.value as? Int {
             lossesCountLabel.text = String(describing: count)
         } else if let direction = item.value as? String {
@@ -116,18 +116,5 @@ class LossesEquipmentCell: UITableViewCell {
         } else {
             lossesCountLabel.text = "-"
         }
-    }
-    
-    private func splitCamelCase(_ input: String) -> String {
-        return input
-            .enumerated()
-            .map { index, character in
-                if index > 0 && character.isUppercase {
-                    return " " + String(character)
-                } else {
-                    return String(character)
-                }
-            }
-            .joined()
-    }
+    } 
 }

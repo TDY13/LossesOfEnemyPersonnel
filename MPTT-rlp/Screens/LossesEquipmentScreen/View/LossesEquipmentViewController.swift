@@ -7,11 +7,6 @@
 
 import UIKit
 
-struct EquipmentModel {
-    let name: String
-    let value: Any?
-}
-
 class LossesEquipmentViewController: BaseViewController {
     private let mainView = LossesEquipmentView()
     
@@ -39,28 +34,18 @@ class LossesEquipmentViewController: BaseViewController {
     
     private func initViewController() {
         navigationItem.leftBarButtonItem = nil
-        navigationItem.title = decodeDateFromString(lossesEquipment.date)
-    
+        navigationItem.title = lossesEquipment.date.decodeDateFromString()
+        
         equipmentData = createEquipmentDataFromReflection(lossesEquipment)
         
         mainView.tableView.delegate = self
         mainView.tableView.dataSource = self
-        mainView.tableView.register(LossesEquipmentCell.self,
-                                    forCellReuseIdentifier: LossesEquipmentCell.id)
+        mainView.tableView.register(LossesEquipmentCell.self, forCellReuseIdentifier: LossesEquipmentCell.id)
     }
-    
-    func decodeDateFromString(_ dateString: String) -> String? {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = R.constant.dateFormatterYMD
-        
-        if let date = dateFormatter.date(from: dateString) {
-            let resultFormatter = DateFormatter()
-            resultFormatter.dateFormat = R.constant.dateFormatterDMY
-            return resultFormatter.string(from: date)
-        } else {
-            return nil
-        }
-    }
+}
+
+//MARK: - Reflection
+extension LossesEquipmentViewController {
     
     private func createEquipmentDataFromReflection(_ lossesEquipment: LossesEquipmentModel) -> [EquipmentModel] {
         let mirror = Mirror(reflecting: lossesEquipment)
@@ -91,9 +76,7 @@ class LossesEquipmentViewController: BaseViewController {
 }
 
 //MARK: - UITableViewDelegate
-extension LossesEquipmentViewController: UITableViewDelegate {
-    
-}
+extension LossesEquipmentViewController: UITableViewDelegate {}
 
 //MARK: - UITableViewDataSource
 extension LossesEquipmentViewController: UITableViewDataSource {

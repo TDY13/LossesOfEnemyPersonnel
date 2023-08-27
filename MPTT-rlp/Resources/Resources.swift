@@ -33,7 +33,9 @@ struct R {
         static let dateFormatterDMY = "dd.MM.yyyy"
         
         static let lossesPersonnel = "Losses personnel"
+        
         static let equipJSON = "lossesEquipment.json"
+        static let onboardingJSON = "onboarding.json"
         static let personnelJSON = "lossesPersonnel.json"
         
         static let enemyLosses = "ENEMY LOSSES AMOUNTED TO:"
