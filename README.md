@@ -1,4 +1,12 @@
 ![LaunchScreen](https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/launchScreen.png)
+![LaunchScreen](https://github.com/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding1.png)
+![LaunchScreen](https://github.com/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding2.png)
+![LaunchScreen](https://github.com/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding3.png)
+![LaunchScreen](https://github.com/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding4.png)
+![LaunchScreen](https://github.com/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/Onboarding5.png)
+![LaunchScreen](https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/MainScreen.png)
+![LaunchScreen](https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/MainScreenWithSearchBar.png)
+![LaunchScreen](https://github.com/TDY13/LossesOfEnemyPersonnel/blob/main/ImagesForReadme/detailScreen.png)
 
 # Preparing the project for publication in AppStore
 
