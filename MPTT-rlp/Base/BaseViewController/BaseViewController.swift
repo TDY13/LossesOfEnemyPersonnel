@@ -21,7 +21,7 @@ class BaseViewController: UIViewController {
         standardAppearance.configureWithTransparentBackground()
         standardAppearance.backgroundColor = .white
         
-        let backImage = UIImage(systemName: "chevron.left")
+        let backImage = UIImage(systemName: R.image.chevronLeft)
         standardAppearance.setBackIndicatorImage(backImage, transitionMaskImage: backImage)
         
         navigationItem.standardAppearance = standardAppearance
@@ -37,7 +37,7 @@ class BaseViewController: UIViewController {
     private func setUpSubviews() {
         view.backgroundColor = R.color.bg
         navigationItem.backButtonDisplayMode = .minimal
-        navigationItem.leftBarButtonItem = .init(image: UIImage(systemName: "crown.fill")?.withTintColor(.systemBlue, renderingMode: .alwaysOriginal), style: .plain, target: self, action: #selector(didTapInfoButton))
+        navigationItem.leftBarButtonItem = .init(image: UIImage(systemName: R.image.infoCircle)?.withTintColor(.systemBlue, renderingMode: .alwaysOriginal), style: .plain, target: self, action: #selector(didTapInfoButton))
     }
     
     private func presentCharityScreen() {

@@ -22,7 +22,7 @@ final class OnboardingView: UIView {
         let obj = UIButton()
         obj.layer.cornerRadius = 12
         obj.backgroundColor = .white
-        obj.setTitle("Continue", for: .normal)
+        obj.setTitle(R.constant.continueText, for: .normal)
         obj.setTitleColor(.systemBlue, for: .normal)
         obj.translatesAutoresizingMaskIntoConstraints = false
         obj.titleLabel?.font = .systemFont(ofSize: 17, weight: .semibold)
