@@ -15,6 +15,8 @@ final class MainScreenViewController: BaseSearchViewController {
     
     private var dataSource: UITableViewDiffableDataSource<Int, AnyHashable>?
     
+    private var ascendingSort = true
+    
     private var networkLayer: NetworkLayer
     private var equipmentService: EquipmentService
     
@@ -42,11 +44,26 @@ final class MainScreenViewController: BaseSearchViewController {
         navigationItem.title = R.constant.lossesPersonnel
         
         configTableView()
+        setupSortingButton()
         
         Task {
             do {
                 try await fetchPersonnelDataAndProcess()
                 try await fetchEquipmentDataAndProcess()
+            }
+        }
+    }
+    
+    private func sortedArrayByDay(ascending: Bool, completion: () -> Void?) {
+        if ascending {
+            if ascendingSort == false {
+                lossesPersonnel = lossesPersonnel.sorted { $0.day < $1.day }
+                completion()
+            }
+        } else {
+            if ascendingSort == true {
+                lossesPersonnel = lossesPersonnel.sorted { $0.day > $1.day }
+                completion()
             }
         }
     }
@@ -74,7 +91,7 @@ extension MainScreenViewController {
         do {
             self.lossesEquipment = try await equipmentService.takeLossesEquipment()
         } catch {
-            self.lossesPersonnel = Bundle.main.decode([LossesPersonnelModel].self, from: R.constant.equipJSON)
+            self.lossesEquipment = Bundle.main.decode([LossesEquipmentModel].self, from: R.constant.equipJSON)
         }
     }
 }
@@ -133,5 +150,30 @@ extension MainScreenViewController {
         
         searchWorkItem = workItem
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: workItem)
+    }
+}
+
+//MARK: - SortingSetup
+extension MainScreenViewController {
+    
+    private func setupSortingButton() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: mainView.sortingButton)
+        let menu = UIMenu(title: "", options: .displayInline, children: [
+            UIAction(title: R.constant.lowToHight, image: UIImage(systemName: R.image.chevronDown)?.withTintColor(.systemBlue, renderingMode: .alwaysOriginal), handler: { action in
+                self.sortedArrayByDay(ascending: true) {
+                    self.updateDataSource()
+                }
+                self.ascendingSort = true
+
+            }),
+            UIAction(title: R.constant.hightToLow, image: UIImage(systemName: R.image.chevronUp)?.withTintColor(.systemBlue, renderingMode: .alwaysOriginal), handler: { action in
+                self.sortedArrayByDay(ascending: false) {
+                    self.updateDataSource()
+                }
+                self.ascendingSort = false
+            })
+        ])
+        
+        mainView.sortingButton.menu = menu
     }
 }

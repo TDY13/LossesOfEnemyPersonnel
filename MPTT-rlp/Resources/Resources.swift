@@ -18,12 +18,21 @@ struct R {
     
     struct image {
         static let afou = "AFoU"
+        static let infoCircle = "info.circle.fill"
+        static let arrows = "arrow.up.arrow.down"
+        static let chevronLeft = "chevron.left"
+        static let chevronUp = "chevron.up.circle"
+        static let chevronDown = "chevron.down.circle"
     }
     
     struct constant {
         static let id = "id"
         static let day = "day"
         static let date = "date"
+        static let continueText = "Continue"
+        
+        static let lowToHight = "Day: Low to High"
+        static let hightToLow = "Day: High to Low"
         
         static let statisticsFor = "Statistics for "
         static let unknownDate = "**.**.****"

@@ -9,6 +9,14 @@ import UIKit
 
 final class MainScreenView: UIView {
     
+    var sortingButton: UIButton = {
+        let obj = UIButton()
+        obj.setImage(UIImage(systemName: R.image.arrows)?.withTintColor(.systemBlue, renderingMode: .alwaysOriginal), for: .normal)
+        obj.showsMenuAsPrimaryAction = true
+        obj.backgroundColor = .clear
+        return obj
+    }()
+    
     let tableView: UITableView = {
         let obj = UITableView(frame: .zero, style: .insetGrouped)
         obj.translatesAutoresizingMaskIntoConstraints = false
